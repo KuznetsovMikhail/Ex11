@@ -22,6 +22,8 @@ Train::Train()
 
 void Train::addCage(Cage* _cage) {
   if (nullptr == begin) {
+    _cage->right = _cage;
+    _cage->left = _cage;
     begin = _cage;
     end = _cage;
   } else {
