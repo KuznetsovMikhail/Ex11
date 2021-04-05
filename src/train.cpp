@@ -42,7 +42,7 @@ void Train::createCages(unsigned int _length) {
 unsigned int Train::countLength() {
   Cage* curr = begin;
   begin->on();
-  for (unsigned int step = 1; ;step++) {
+  for (unsigned int step = 1; ; step++) {
     for (unsigned int i = 0; i < step; i++) {
       curr = curr->left;
       curr->off();
@@ -57,7 +57,7 @@ unsigned int Train::countLength() {
 
 void Train::print() {
   Cage* curr = begin;
-  for (unsigned int step = 1; ;step++) {
+  for (unsigned int step = 1; ; step++) {
     std::cout << "Cage #" << step
     << ", lamp is " << (curr->isLight() ? "on\n" : "off\n");
     curr = curr->left;
