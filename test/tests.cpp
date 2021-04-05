@@ -1,6 +1,4 @@
 // Copyright 2021 Kuznetsov Mikhail
-#include <string>
-#include <vector>
 #include <random>
 #include "gtest/gtest.h"
 #include "train.h"
