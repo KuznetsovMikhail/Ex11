@@ -13,8 +13,9 @@ int main() {
   << train1->countLength() << std::endl;  // 10
   train1->print();  // all lamp were off in the counting process
   Train* train2 = new Train;
-  train2->createCages(std::rand() % 500 + 1);  // length is random value between 1 and 500
-  std::cout << "The length of train is " << train2->countLength();  // find length
+  train2->createCages(std::rand() % 500 + 1);  // length is random
+  std::cout << "The length of train is "
+  << train2->countLength();  // find length
   train2->print();  // check
   return 0;
 }
