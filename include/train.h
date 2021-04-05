@@ -1,25 +1,34 @@
-#ifndef TRAIN_H_INCLUDED
-#define TRAIN_H_INCLUDED
+// Copyright 2021 Kuznetsov Mikhail
+#ifndef INCLUDE_TRAIN_H_
+#define INCLUDE_TRAIN_H_
 
-#include <
+#include <iostream>
+#include <random>
+
 class Cage {
  private:
-  bool lamp;
+    bool lamp;
 
  public:
-    Cage();
-    void on()  { light=true;    }
-    void off() { light = false; }
-    bool isLight() const { return lamp; }
     Cage* left;
     Cage* right;
+    explicit Cage(bool _lamp = false);
+    void on();
+    void off();
+    bool isLight() const;
 };
 
 class Train {
- public:
+ private:
     Cage* begin;
+    Cage* end;
+ public:
     Train();
+    void addCage(Cage* _cage);
+    void createCages(unsigned int _length);
+    unsigned int countLength();
+    void print();
 };
 
 
-#endif // TRAIN_H_INCLUDED
+#endif  // INCLUDE_TRAIN_H_
